@@ -18,15 +18,13 @@ async function initTradfri() {
 function customLogger(message, severity) {
   switch (severity) {
     case "silly":
-    case "debug":
       break;
+    case "debug":
     case "info":
     case "warn":
-      console.log(`${severity} - ${message}`)
-      break;
     case "error":
     default:
-      console.error(`${severity} - ${message}`)
+      console.log(`${severity} - ${message}`)
       break;
   }
 }
